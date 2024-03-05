@@ -2,12 +2,18 @@
 import axios from 'axios';
 import {store} from './store';
 
+import CardsList from './components/CardsList.vue';
+
 export default {
   data() {
     return {
 
       store,
     }
+  },
+
+  components: {
+    CardsList,
   },
 
   created() {
@@ -23,7 +29,10 @@ export default {
 </script>
 
 <template>
-  
+  <div class="container">
+
+    <CardsList></CardsList>
+  </div>
 </template>
 
 <style lanc="scss">
