@@ -3,6 +3,7 @@ import axios from 'axios';
 import {store} from './store';
 
 import CardsList from './components/CardsList.vue';
+import AppLoader from './components/AppLoader.vue';
 
 export default {
   data() {
@@ -14,6 +15,7 @@ export default {
 
   components: {
     CardsList,
+    AppLoader,
   },
 
   created() {
@@ -29,6 +31,7 @@ export default {
 </script>
 
 <template>
+  <AppLoader v-if="! store.cards.length > 0"></AppLoader>
   <div class="container">
 
     <CardsList></CardsList>
