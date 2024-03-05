@@ -22,7 +22,7 @@ export default {
             {{ card.name }}
         </strong>
         <span>
-            {{ card.archetype }}
+            {{ card.race }}
         </span>
     </li>
 
