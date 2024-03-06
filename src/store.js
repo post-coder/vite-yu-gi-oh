@@ -9,4 +9,6 @@ export const store = reactive({
 
     filterValue: '',
 
+    numberOfCards: null,
+
 });

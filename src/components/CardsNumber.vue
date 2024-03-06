@@ -17,7 +17,7 @@ export default {
 <template>
     
     <div>
-        Numero di carte: 
+        Numero di carte: {{ store.numberOfCards }}
     </div>
 
 </template>

@@ -44,7 +44,8 @@ export default {
       // console.log('Richiesta di filtro')
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0&archetype=' + this.store.filterValue) 
         .then(res => {
-          console.log('carte', res.data.data)
+          console.log('Numero di carte', res.data.meta.total_rows)
+          this.store.numberOfCards = res.data.meta.total_rows;
           this.store.cards = res.data.data;
       });
     },
